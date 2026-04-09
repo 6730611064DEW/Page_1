@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Form</title>
+    </head>
+
+    <body>
+        
+        <div id="myhello">Hello</div>
+
+        <input id="fname" name="first" value="test">
+
+        <div>
+
+            <input type="checkbox" name="interest" value="หนังสือ">หนังสือ
+            <input type="checkbox" name="interest" value="เกม">เกม
+            <input type="checkbox" name="interest" value="กีฬา">กีฬา
+
+        </div>
+
+        <div>
+
+            <button onclick="buttonClick()">Click!!</button>
+
+        </div>
+
+        <div>
+
+            <button id="submit_btn" onclick="submit_btn">ดำเนินการต่อ</button>
+
+        </div>
+
+        <div id="hellomyname">
+            Hello
+            <span style="display: none;">Myname</span>
+
+        </div>
+
+        <div id="mycontent">HTML จีน</div>
+
+    </body>
+
+    <script>
+
+        console.log('Hello World');
+
+        let firstnameDOM = document.getElementById('fname');
+        console.log(fnameDOM.value);
+        console.log(document.getElementById('fname').value);
+        console.log(document.querySelector('#fname').value);
+        console.log(document.querySelector('input[name="first"]').value);
+
+        let hobby=document.querySelectorAll('input[name="interest"]');
+        console.log(hobby.length);
+
+        for (let i=0; i < hobby.length; i++){
+            console.log(hobby[i].value);
+        }
+
+        function buttonClick(){
+            console.log('คลิกแล้ว');
+        }
+
+        const btn = document.getElementById('submit_btn');
+        btn.addEventListener('click', submitData);
+
+        function submitData(){
+            console.log('ส่งข้อมูลแล้ว')
+        }
+
+        const myname = document.getElementById('hellomyname');
+        console.log(myname);
+        console.log(myname.textContent);
+        console.log(myname.innerText);
+        console.log(myname.innerHTML);
+
+        let myhtml = '<ul>  ';
+            myhtml += '<li>' + firstnameDOM.value + '</li>';
+            myhtml += '</ul>';
+        
+        console.log(document.getElementById('mycontent').innerHTML = myhtml);
+
+        let setCSS = document.getElementById('myhello');
+        setCSS.style.backgroundColor = 'blue';
+        setCSS.style.color = 'gray';
+
+    </script>
+
+</html>
