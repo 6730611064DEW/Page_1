@@ -28,7 +28,7 @@ supermarket-app/
 cd supermarket-app
 ```
 
-### 2. ติดตั้ง dependencies
+### 2. ติดตั้ง Dependencies
 ```bash
 npm install
 ```
@@ -38,7 +38,7 @@ npm install
 mysql -u root -p < supermarket_db.sql
 ```
 
-### 4. ตั้งค่า environment (ถ้าต้องการ)
+### 4. ถ้าต้องการตั้งค่า Environment 
 สร้างไฟล์ `.env` หรือแก้ค่าใน `models/productModel.js`:
 ```
 DB_HOST=localhost
